@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+rust_algo/target/
+rust_algo/src/*.exe
+rust_algo/src/*.pdb
