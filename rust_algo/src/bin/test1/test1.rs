@@ -34,6 +34,7 @@ fn main(){
         weight : 25.3,
         price : 455.00,
         alive : true,
+        fav_food : FavFood::Beef,
     },
     Dog{
         breed : String::from("Golden Retriever"),
@@ -42,6 +43,7 @@ fn main(){
         weight : 22.3,
         price : 235.00,
         alive : true,
+        fav_food : FavFood::Chicken,
     },
     Dog{
         breed : String::from("Chihuaha"),
@@ -50,28 +52,31 @@ fn main(){
         weight : 5.3,
         price : 35.00,
         alive : true,
+        fav_food : FavFood::PeanutButter,
     },
     Dog{
         breed : String::from("Doberman"),
         name : String::from("James III"),
-        age : 5,
+        age : 2,
         weight : 26.6,
         price : 1235.00,
         alive : true,
+        fav_food : FavFood::Chocolate,
     },
     ];
 
     for i in 0..doggy_array.len(){
         doggy_array[i].dog_info();
     }
-    
+    /* 
     doggy_array[2].rename(String::from("Jameis"));
     doggy_array[1].rename(String::from("Jimerson"));
     doggy_array[3].rename(String::from("JimmyJoe"));
-
+    */
     let wait_time = 12;
 
     for i in 0..doggy_array.len(){
+        doggy_array[i].eat();
         doggy_array[i].wait(wait_time);
     }
     
@@ -129,6 +134,16 @@ struct Dog {
     weight : f32,
     price : f32,
     alive : bool,
+    fav_food : FavFood,
+}
+
+enum FavFood{
+    Beef,
+    Chicken,
+    Salmon,
+    PeanutButter,
+    Cheese,
+    Chocolate,
 }
 
 impl Dog {
@@ -142,7 +157,6 @@ impl Dog {
         }
     }
 
-
     fn rename(&mut self, new_name : String){
         self.name = new_name;
     }
@@ -151,6 +165,29 @@ impl Dog {
         self.age += time;
         if self.age > 15{
             self.alive = false;
+        }
+    }
+
+    fn eat(&mut self){
+        match self.fav_food{
+            FavFood::Chocolate => {
+                self.alive = false;
+            }
+            FavFood::Beef => {
+                self.weight += 2.0;
+            }
+            FavFood::Cheese => {
+                self.weight += 5.0;
+            }
+            FavFood::Chicken => {
+                self.weight += 1.0;
+            }
+            FavFood::PeanutButter => {
+                self.weight += 15.0;
+            }
+            _ => {
+                self.weight += 0.0;
+            }
         }
     }
 }

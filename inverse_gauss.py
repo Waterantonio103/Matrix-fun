@@ -27,7 +27,6 @@ def row_echelon(matrix):
 def determinant(matrix):
     matrix, swap = row_echelon(matrix)
     n = len(matrix)
-    matrix = [row[:] for row in matrix]
     if n == 1:
         return matrix[0][0]
     elif n == 2:
