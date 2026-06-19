@@ -22,7 +22,7 @@ fn main() {
             let mut inner : Vec<f64> = Vec::new();
             
             for _j in 0..size{
-                let n : f64 = rand::random_range(0.0..255.0);
+                let n : f64 = random_range(0.0..255.0);
                 inner.push(n);
             }
             matrix.push(inner)
