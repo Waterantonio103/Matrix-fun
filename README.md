@@ -15,3 +15,5 @@ Inverse algorithms have been written in **Python** and **Rust**.
 | Laplace / Cofactor Expansion | O(n!) |
 | Gaussian Row Elimination | O(n³) |
 | Gauss-Jordan Elimination | O(n³) |
+
+<img src="assets/starry_night.jpg" alt="Van Gogh's Starry Night" width = 400>
