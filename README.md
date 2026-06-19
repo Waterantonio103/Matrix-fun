@@ -1,3 +1,17 @@
-The goal of this small fun project repo is to take an image as input, extract its rgb values into individual R G and B matrices, calculate their inverses (plus a little scaling and fooling around) and re-build the image from the new pixel values (will likely produce a visual mess nowhere close to the initial image -- just for fun and experimenting). 
-The current preferred method of choice is Gauss Jordan. 
-Current status : inverse algorithms written in python and in rust (Laplace-Cofactor ~O(n!), Gauss Row elemination ~O(n^3), Gauss-Jordan ~O(n^3)).
+# Image Matrix Inversion Experiment
+
+A small experimental project that takes an image as input, extracts its RGB values into separate **R**, **G**, and **B** matrices, computes matrix inverses, and rebuilds the image from the transformed pixel values.
+
+The result will likely be a visual mess rather than a close reconstruction of the original image. The goal is experimentation, not image quality.
+
+## Current Status
+
+Inverse algorithms have been written in **Python** and **Rust**.
+
+## Methods
+
+| Algorithm | Complexity |
+|---|---:|
+| Laplace / Cofactor Expansion | `O(n!)` |
+| Gaussian Row Elimination | `O(n^3)` |
+| Gauss-Jordan Elimination | `O(n^3)` |
