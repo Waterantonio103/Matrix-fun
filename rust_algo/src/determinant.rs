@@ -1,10 +1,4 @@
-fn main() {
-    let matrix: Vec<Vec<f64>> = rand_vec(3);
-    let result = determinant(&matrix);
-    println!("Determinant : {result}");
-}
-
-fn determinant(matrix : &Vec<Vec<f64>>) -> f64 {
+pub fn determinant(matrix : &Vec<Vec<f64>>) -> f64 {
     let (matrix, swap) = row_echelon(matrix);
     let n = matrix.len();
         
@@ -25,7 +19,7 @@ fn determinant(matrix : &Vec<Vec<f64>>) -> f64 {
     }
 }
 
-fn row_echelon(matrix : &Vec<Vec<f64>>) -> (Vec<Vec<f64>>, u32) {
+pub fn row_echelon(matrix : &Vec<Vec<f64>>) -> (Vec<Vec<f64>>, u32) {
     let mut matrix = matrix.clone();
     let n = matrix.len();
     let mut swap: u32 = 0;
@@ -57,18 +51,3 @@ fn row_echelon(matrix : &Vec<Vec<f64>>) -> (Vec<Vec<f64>>, u32) {
     return (matrix, swap)                        
 }
 
-fn rand_vec(size : i32) -> Vec<Vec<f64>> {
-        let mut matrix : Vec<Vec<f64>> = Vec::new();
-        
-        for _i in 0..size{
-            let mut inner : Vec<f64> = Vec::new();
-            
-            for _j in 0..size{
-                let n : f64 = rand::random_range(-5.0..5.0);
-                inner.push(n);
-            }
-            matrix.push(inner)
-        };
-        
-        matrix
-    }
