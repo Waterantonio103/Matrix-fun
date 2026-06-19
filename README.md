@@ -13,5 +13,5 @@ Inverse algorithms have been written in **Python** and **Rust**.
 | Algorithm | Complexity |
 |---|---:|
 | Laplace / Cofactor Expansion | O(n!) |
-| Gaussian Row Elimination | O(n<sup>3</sup>) |
-| Gauss-Jordan Elimination | O(n<sup>3</sup>) |
+| Gaussian Row Elimination | O(n³) |
+| Gauss-Jordan Elimination | O(n³) |
