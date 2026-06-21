@@ -50,3 +50,5 @@ Image modification code has been written in **Rust** using the **Image** crate.
 ## Clamping RGB Channel Values by a fixed amount per channel
 
 <img src="assets/hellish_night.png" width="400">
+
+
