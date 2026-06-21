@@ -2,11 +2,12 @@
 
 A small experimental project that takes an image as input, extracts its RGB values into separate **R**, **G**, and **B** matrices, computes matrix inverses, and rebuilds the image from the transformed pixel values.
 
-The result will likely be a visual mess rather than a close reconstruction of the original image. The goal is experimentation, not image quality.
+The goal is experimentation, not image quality.
 
 ## Current Status
 
-Inverse algorithms have been written in **Python** and **Rust**.
+Inverse algorithms have been written in **Python** and **Rust**.  
+Image modification code has been written in **Rust** using the **Image** crate.
 
 ## Methods
 
@@ -31,8 +32,21 @@ Inverse algorithms have been written in **Python** and **Rust**.
       <h1>→</h1>
     </td>
     <td align="center" width="300">
-      <i>Result image coming soon</i>
+      <img src="assets/not_so_starry_night.png">
       <br>
+      <b>After Matrix Inversion</b>
+      <br>
+      <sub><i>(Waterantonio103's Not So Starry Night)</i></sub>
     </td>
   </tr>
 </table>
+
+# Other Modifications Tested
+
+## Inverting the pixels
+
+<img src="assets/inverted_starry_night.png" width="400">
+
+## Clamping RGB Channel Values by a fixed amount per channel
+
+<img src="assets/hellish_night.png" width="400">
