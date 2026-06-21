@@ -51,4 +51,28 @@ Image modification code has been written in **Rust** using the **Image** crate.
 
 <img src="assets/hellish_night.png" width="400">
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/fairs.jpg"  width = "300">
+      <br>
+      <b>Original</b> 
+      <br>
+      <sub><i>(#fairs 👌)</i></sub>
+    </td>
+    <td align="center" width="80">
+      <h1>→</h1>
+    </td>
+    <td align="center" width="300">
+      <img src="assets/invertfairs.png">
+      <br>
+      <b>After Inverting</b>
+      <br>
+      <sub><i>(👌👌👌)</i></sub>
+    </td>
+  </tr>
+</table>
+
+<img src="assets/hellfairs.png">
+
 
