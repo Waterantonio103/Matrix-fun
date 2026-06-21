@@ -13,7 +13,7 @@ use image::{DynamicImage, Rgb, RgbImage};
 
 fn main(){
 
-    let input_path = concat!(env!("CARGO_MANIFEST_DIR"), "/../assets/starry_night.jpg");
+    let input_path = concat!(env!("CARGO_MANIFEST_DIR"), "/../assets/fairs.jpg");
     let output_path = concat!(env!("CARGO_MANIFEST_DIR"), "/../assets/full_output.png");
     let img_dynamic: DynamicImage = image::open(input_path).unwrap();
     let img: RgbImage = img_dynamic.to_rgb8();
@@ -53,9 +53,9 @@ fn main(){
             b_vec.push(b_row);
         }
 
-        r_vec = invert(&r_vec, 240.0);
-        g_vec = invert(&g_vec, 140.0);
-        b_vec = invert(&b_vec, 40.0);
+        r_vec = invert(&r_vec, 255.0);
+        g_vec = invert(&g_vec, 255.0);
+        b_vec = invert(&b_vec, 255.0);
 
         // r_vec = normalize(r_vec, 0.7);
         // g_vec = normalize(g_vec, 0.4);
